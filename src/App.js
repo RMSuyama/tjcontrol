@@ -10,12 +10,11 @@ import PomodoroTimer from './components/services/pomodoro';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar />      
+
       <Citacao />
       <Countdown />
-      <Dashboard />
       <Materias />
-      <PomodoroTimer />
     </div>
   );
 }

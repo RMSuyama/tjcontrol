@@ -1,0 +1,75 @@
+/* Estilização da lista de matérias */
+.materias-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+.h4{
+    margin-top: 4vw;
+}
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .subject-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .subject-list li {
+    margin-bottom: 10px;
+  }
+  
+  .subject-list h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subject-list ul {
+    margin-left: 20px;
+  }
+  
+  .subject-list ul li {
+    margin-bottom: 5px;
+  }
+  
+  .subject-list ol {
+    counter-reset: topic-counter;
+    margin-left: 20px;
+  }
+  
+  .subject-list ol li {
+    counter-increment: topic-counter;
+    margin-bottom: 5px;
+  }
+  
+  .subject-list ol li::before {
+    content: counter(topic-counter) ". ";
+    font-weight: bold;
+  }
+  
+  /* Estilização dos links de navegação */
+  .navigation-links {
+    margin-bottom: 20px;
+  }
+  
+  .navigation-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .navigation-links a:hover {
+    background-color: #999;
+  }
+  
+  

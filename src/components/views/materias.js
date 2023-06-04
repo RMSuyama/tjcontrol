@@ -1,25 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../views/materias.css';
 
 const Materias = () => {
+  useEffect(() => {
+    // Ajustar a posição do scroll após a navegação
+    const adjustScrollPosition = () => {
+      const navbarHeight = document.getElementById('navbar-example3').offsetHeight;
+      window.scrollBy(0, -navbarHeight);
+    };
+
+    const navLinks = document.querySelectorAll('#navbar-example3 .nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', adjustScrollPosition);
+    });
+
+    return () => {
+      navLinks.forEach((link) => {
+        link.removeEventListener('click', adjustScrollPosition);
+      });
+    };
+  }, []);
+
   return (
     <div className="card">
-      
-
       <div className="row">
         <div className="col-4">
           <nav id="navbar-example3" className="h-100 flex-column align-items-stretch pe-4 border-end">
             <nav className="nav nav-pills flex-column">
-              <a className="nav-link ms-3 my-1" href="#bloco-i">BLOCO I: Língua Portuguesa</a>
-              <a className="nav-link ms-3 my-1" href="#bloco-ii">BLOCO II: Conhecimentos em Direito</a>
-              <a className="nav-link ms-3 my-1" href="#bloco-iii">BLOCO III: Conhecimentos Gerais</a>
+              <a className="nav-link ms-3 my-1" href="#bloco-i">
+                BLOCO I: Língua Portuguesa
+              </a>
+              <a className="nav-link ms-3 my-1" href="#bloco-ii">
+                BLOCO II: Conhecimentos em Direito
+              </a>
+              <a className="nav-link ms-3 my-1" href="#bloco-iii">
+                BLOCO III: Conhecimentos Gerais
+              </a>
             </nav>
           </nav>
         </div>
 
         <div className="col-8">
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" className="scrollspy-example-2" tabIndex="0">
-            <div id="bloco-i">
+          <div
+            data-bs-spy="scroll"
+            data-bs-target="#navbar-example3"
+            data-bs-offset="0"
+            data-bs-duration="200"
+            className="scrollspy-example-2"
+            tabIndex="0"
+          >
+            <div id="bloco-i" className="mb-4">
               <h4>BLOCO I: Língua Portuguesa</h4>
               <p>(24) questões:</p>
               <ol>
@@ -38,10 +69,15 @@ const Materias = () => {
                 <li>Pontuação.</li>
               </ol>
             </div>
-            <div id="bloco-ii">
-            <a className="nav-link ms-3 my-1" href="#bloco-i">BLOCO I: Língua Portuguesa</a>
+            <div id="bloco-ii" className="mb-4">
 
               <h4>BLOCO II: Conhecimentos em Direito</h4>
+
+
+              <a className="nav-link ms-3 my-1" href="#bloco-i">
+                voltar
+              </a>
+
               <p>(40) questões:</p>
               <ol>
                 <h4>DIREITO PENAL:</h4>
@@ -76,38 +112,34 @@ const Materias = () => {
               </ol>
             </div>
             <div id="bloco-iii">
-            <a className="nav-link ms-3 my-1" href="#bloco-i">BLOCO I: Língua Portuguesa</a>
-
 
               <h4>BLOCO III: Conhecimentos Gerais</h4>
+
+              <a className="nav-link ms-3 my-1" href="#bloco-i"> 
+                voltar
+              </a>
+
               <ul>
                 <h4>Atualidades</h4>
-                <li>1. Questões relacionadas a fatos políticos, econômicos, sociais e culturais, nacionais e
-internacionais, ocorridos a partir do 2° semestre de 2022, divulgados na mídia local e/ou
-nacional;</li>
-                <li>2. Artigos 1º ao 13; 34 ao 38 da Lei nº 13.146/2015 – Estatuto da Pessoa com Deficiência,
-com as alterações vigentes até a publicação deste edital.</li>
-
-
+                <li>1. Questões relacionadas a fatos políticos, econômicos, sociais e culturais, nacionais e internacionais, ocorridos a partir do 2° semestre de 2022, divulgados na mídia local e/ou nacional;</li>
+                <li>2. Artigos 1º ao 13; 34 ao 38 da Lei nº 13.146/2015 – Estatuto da Pessoa com Deficiência, com as alterações vigentes até a publicação deste edital.</li>
                 <h4>Matemática</h4>
                 <ul>
-                    <li>Operações com números reais.</li>
-                    <li>Mínimo múltiplo comum e máximo divisor comum.</li>
-                    <li>Razão e proporção.</li>
-                    <li>Porcentagem.</li>
-                    <li>Regra de três simples e composta.</li>
-                    <li>Média aritmética simples e ponderada.</li>
-                    <li>Juros simples.</li>
-                    <li>Equação do 1.º e 2.º graus.</li>
-                    <li>Sistema de equações do 1.º grau.</li>
-                    <li>Relação entre grandezas: tabelas e gráficos.</li>
-                    <li>Sistemas de medidas usuais.</li>
-                    <li>Noções de geometria: forma, perímetro, área, volume, ângulo, teorema de Pitágoras.</li>
-                    <li>Resolução de situações-problema.</li>
+                  <li>Operações com números reais.</li>
+                  <li>Mínimo múltiplo comum e máximo divisor comum.</li>
+                  <li>Razão e proporção.</li>
+                  <li>Porcentagem.</li>
+                  <li>Regra de três simples e composta.</li>
+                  <li>Média aritmética simples e ponderada.</li>
+                  <li>Juros simples.</li>
+                  <li>Equação do 1.º e 2.º graus.</li>
+                  <li>Sistema de equações do 1.º grau.</li>
+                  <li>Relação entre grandezas: tabelas e gráficos.</li>
+                  <li>Sistemas de medidas usuais.</li>
+                  <li>Noções de geometria: forma, perímetro, área, volume, ângulo, teorema de Pitágoras.</li>
+                  <li>Resolução de situações-problema.</li>
                 </ul>
-
                 <h4>Informática</h4>
-
                 <ul>
                   <li>MS-Windows 10 ou superior: conceito de pastas, diretórios, arquivos e atalhos, área de trabalho, área de transferência, manipulação de arquivos e pastas, uso dos menus, programas e aplicativos, interação com o conjunto de aplicativos do Microsoft-365.</li>
                   <li>MS-Word: estrutura básica dos documentos, edição e formatação de textos, tabelas, impressão, controle de quebras e numeração de páginas, inserção de objetos, campos predefinidos.</li>
@@ -118,12 +150,12 @@ com as alterações vigentes até a publicação deste edital.</li>
                   <li>OneDrive: armazenamento e compartilhamento de arquivos.</li>
                 </ul>
                 <h4>Raciocínio Lógico</h4>
-                  <ul>
-                    <li>Visa avaliar a habilidade do(a) candidato(a) em entender a estrutura lógica das relações arbitrárias entre pessoas, lugares, coisas, eventos fictícios; deduzir novas informações das relações fornecidas e avaliar as condições usadas para estabelecer a estrutura daquelas relações.</li>
-                    <li>Identificação de regularidades em sequências numéricas e figurais, a fim de determinar o elemento em uma posição específica.</li>
-                    <li>Estruturas lógicas: análise de argumentos, diagramas lógicos e avaliação de sua validade.</li>
-                    <li>Resolução de problemas que envolvam o uso de raciocínio lógico.</li>
-                  </ul>
+                <ul>
+                  <li>Visa avaliar a habilidade do(a) candidato(a) em entender a estrutura lógica das relações arbitrárias entre pessoas, lugares, coisas, eventos fictícios; deduzir novas informações das relações fornecidas e avaliar as condições usadas para estabelecer a estrutura daquelas relações.</li>
+                  <li>Identificação de regularidades em sequências numéricas e figurais, a fim de determinar o elemento em uma posição específica.</li>
+                  <li>Estruturas lógicas: análise de argumentos, diagramas lógicos e avaliação de sua validade.</li>
+                  <li>Resolução de problemas que envolvem frações, conjuntos, porcentagens, sequências (com números, com figuras e de palavras), equivalência e transformação de unidades de medida.</li>
+                </ul>
               </ul>
             </div>
           </div>
@@ -131,6 +163,6 @@ com as alterações vigentes até a publicação deste edital.</li>
       </div>
     </div>
   );
-}
+};
 
 export default Materias;
