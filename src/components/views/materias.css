@@ -6,9 +6,12 @@
     height: 100vh;
   }
   
-.h4{
-    margin-top: 4vw;
-}
+  h4{
+    margin-top: 1vw;
+  }
+  .ul{
+    margin-top: 1vw;
+  }
   .card-title {
     font-size: 24px;
     font-weight: bold;
