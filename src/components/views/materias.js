@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../views/materias.css';
+import listTaskImage from '../../static/img/list-task.svg';
 
 const Materias = () => {
   useEffect(() => {
@@ -34,6 +35,10 @@ const Materias = () => {
               <a className="nav-link ms-3 my-1" href="#bloco-ii">
                 BLOCO II: Conhecimentos em Direito
               </a>
+
+              
+
+
               <a className="nav-link ms-3 my-1" href="#bloco-iii">
                 BLOCO III: Conhecimentos Gerais
               </a>
@@ -71,36 +76,43 @@ const Materias = () => {
             </div>
             <div id="bloco-ii" className="mb-4">
 
+              
               <h4>BLOCO II: Conhecimentos em Direito</h4>
 
+              
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <p>(40) questões:
 
-              <a className="nav-link ms-3 my-1" href="#bloco-i">
-                voltar
-              </a>
+                <a className="nav-link ms-3 my-1" href="#bloco-i">
+                  <img src={listTaskImage} alt="Descrição da imagem" />
+                </a>
 
-              <p>(40) questões:</p>
+                </p>
+
+              </div>
+
               <ol>
-                <h4>DIREITO PENAL:</h4>
+                <h5>DIREITO PENAL:</h5>
                 <ul>
                   <li>Código Penal - artigos 293 a 305; 307; 308; 311-A; 312 a 317; 319 a 333; 336 e 337; 339 a 347; 357 e 359.</li>
                 </ul>
-                <h4>DIREITO PROCESSUAL PENAL:</h4>
+                <h5>DIREITO PROCESSUAL PENAL:</h5>
                 <ul>
                   <li>Código de Processo Penal - artigos 251 a 258; 261 a 267; 274; 351 a 372; 394 a 497; 531 a 538; 541 a 548; 574 a 667 e Lei nº 9.099 de 26.09.1995 (artigos 60 a 83; 88 e 89).</li>
                 </ul>
-                <h4>DIREITO PROCESSUAL CIVIL:</h4>
+                <h5>DIREITO PROCESSUAL CIVIL:</h5>
                 <ul>
                   <li>Código de Processo Civil - artigos 144 a 155; 188 a 275; 294 a 311 e do 318 a 538; 994 a 1026; Lei nº 9.099 de 26.09.1995 (artigos 3º ao 19) e Lei nº 12.153 de 22.12.2009.</li>
                 </ul>
-                <h4>DIREITO CONSTITUCIONAL:</h4>
+                <h5>DIREITO CONSTITUCIONAL:</h5>
                 <ul>
                   <li>Constituição Federal – Título II - Capítulos I, II e III; e Título III - Capítulo VII com Seções I e II; e também o artigo 92.</li>
                 </ul>
-                <h4>DIREITO ADMINISTRATIVO:</h4>
+                <h5>DIREITO ADMINISTRATIVO:</h5>
                 <ul>
                   <li>Estatuto dos Funcionários Públicos Civis do Estado de São Paulo (Lei n.º 10.261/68) – artigos 239 a 323; e Lei Federal nº 8.429/92 (Lei de Improbidade Administrativa)</li>
                 </ul>
-                <h4>NORMAS DA CORREGEDORIA GERAL DA JUSTIÇA (disponíveis no portal do Tribunal de Justiça – site: www.tjsp.jus.br, na área Institucional / Corregedoria / Normas Judiciais):</h4>
+                <h5>NORMAS DA CORREGEDORIA GERAL DA JUSTIÇA (disponíveis no portal do Tribunal de Justiça – site: www.tjsp.jus.br, na área Institucional / Corregedoria / Normas Judiciais):</h5>
                 <ul>
                   <li>Tomo I – Capítulo II: Seção I – subseções I e II;</li>
                   <li>Tomo I - Capítulo III: Seções I, II, V, VI, VII;</li>
@@ -115,15 +127,21 @@ const Materias = () => {
 
               <h4>BLOCO III: Conhecimentos Gerais</h4>
 
-              <a className="nav-link ms-3 my-1" href="#bloco-i"> 
-                voltar
-              </a>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <p>(40) questões:
+
+                <a className="nav-link ms-3 my-1" href="#bloco-i">
+                  <img src={listTaskImage} alt="Descrição da imagem" />
+                </a>
+                </p>
+
+              </div>
 
               <ul>
-                <h4>Atualidades</h4>
+                <h5>Atualidades</h5>
                 <li>1. Questões relacionadas a fatos políticos, econômicos, sociais e culturais, nacionais e internacionais, ocorridos a partir do 2° semestre de 2022, divulgados na mídia local e/ou nacional;</li>
                 <li>2. Artigos 1º ao 13; 34 ao 38 da Lei nº 13.146/2015 – Estatuto da Pessoa com Deficiência, com as alterações vigentes até a publicação deste edital.</li>
-                <h4>Matemática</h4>
+                <h5>Matemática</h5>
                 <ul>
                   <li>Operações com números reais.</li>
                   <li>Mínimo múltiplo comum e máximo divisor comum.</li>
@@ -139,7 +157,7 @@ const Materias = () => {
                   <li>Noções de geometria: forma, perímetro, área, volume, ângulo, teorema de Pitágoras.</li>
                   <li>Resolução de situações-problema.</li>
                 </ul>
-                <h4>Informática</h4>
+                <h5>Informática</h5>
                 <ul>
                   <li>MS-Windows 10 ou superior: conceito de pastas, diretórios, arquivos e atalhos, área de trabalho, área de transferência, manipulação de arquivos e pastas, uso dos menus, programas e aplicativos, interação com o conjunto de aplicativos do Microsoft-365.</li>
                   <li>MS-Word: estrutura básica dos documentos, edição e formatação de textos, tabelas, impressão, controle de quebras e numeração de páginas, inserção de objetos, campos predefinidos.</li>
@@ -149,7 +167,7 @@ const Materias = () => {
                   <li>MS Teams: chats, chamadas de áudio e vídeo, criação de grupos, trabalho em equipe com Word, Excel, PowerPoint, SharePoint e OneNote, agendamento de reuniões e gravação.</li>
                   <li>OneDrive: armazenamento e compartilhamento de arquivos.</li>
                 </ul>
-                <h4>Raciocínio Lógico</h4>
+                <h5>Raciocínio Lógico</h5>
                 <ul>
                   <li>Visa avaliar a habilidade do(a) candidato(a) em entender a estrutura lógica das relações arbitrárias entre pessoas, lugares, coisas, eventos fictícios; deduzir novas informações das relações fornecidas e avaliar as condições usadas para estabelecer a estrutura daquelas relações.</li>
                   <li>Identificação de regularidades em sequências numéricas e figurais, a fim de determinar o elemento em uma posição específica.</li>
