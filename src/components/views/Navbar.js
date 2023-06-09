@@ -19,7 +19,7 @@ const Navbar = () => {
             <a class="nav-link active" aria-current="page" href="#"><Link to="/sobre">Edital</Link></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#"><Link to="/usuario">Usuário</Link></a>
+            <a class="nav-link" href="#"><Link to="/usuario">Rotina</Link></a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#"><Link to="/sobre">Sobre</Link></a>
