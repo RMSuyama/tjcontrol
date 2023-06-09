@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../views/nav';
+import Navbar from '../views/Navbar';
 import Materias from '../views/materias';
 
 const Sobre = () => {

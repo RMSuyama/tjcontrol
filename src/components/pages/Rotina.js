@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Navbar from '../views/nav';
+import Navbar from '../views/Navbar';
 import Countdown from '../views/countdown';
 import Esquemaestudos from '../views/esquemaestudos';
 const Usuario = () => {

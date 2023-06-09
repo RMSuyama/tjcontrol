@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Sobre from "../pages/Edital";
 import Usuario from "../pages/Rotina";
 
-import Navbar from "../views/nav";
+import Navbar from "../views/Navbar";
 
 const Rotas = () => {
    return (
