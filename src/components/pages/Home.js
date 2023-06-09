@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../views/Nav';
+import Navbar from '../views/nav';
 import Citacao from '../views/citacao';
 import Countdown from '../views/countdown';
 
