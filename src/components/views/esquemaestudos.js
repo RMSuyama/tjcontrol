@@ -1,4 +1,5 @@
 import React from 'react';
+import './esquemaestudos.css'
 
 const StudySchedule = () => {
   return (

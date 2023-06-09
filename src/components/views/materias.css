@@ -74,6 +74,8 @@
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    text-align: justify;
+    
   }
   
   .navigation-links a:hover {
