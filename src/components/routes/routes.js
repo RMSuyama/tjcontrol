@@ -5,7 +5,6 @@ import Home from "../pages/Home";
 import Sobre from "../pages/Edital";
 import Usuario from "../pages/Rotina";
 
-import Navbar from "../views/Navbar";
 
 const Rotas = () => {
    return (
@@ -14,7 +13,6 @@ const Rotas = () => {
                <Route element={<Home />} path="/" exact />
                <Route element={<Sobre />} path="/sobre" />
                <Route element={<Usuario />} path="/usuario" />
-               <Route element={<Navbar />} path="/navbar" />
            </Routes>
        </BrowserRouter>
    );
