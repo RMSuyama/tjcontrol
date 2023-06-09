@@ -44,31 +44,35 @@ const Pomodoro = () => {
   };
 
   return (
-    <div className="Pomodoro container">
-      <h1 className="text-center">Pomodoro Timer</h1>
-      <div className="timer text-center">{formatTime(time)}</div>
-      <div className="controls d-flex justify-content-center">
-        <button
-          className="btn btn-primary me-2"
-          onClick={handleStart}
-          disabled={isActive}
-        >
-          Start
-        </button>
-        <button
-          className="btn btn-secondary me-2"
-          onClick={handlePause}
-          disabled={!isActive}
-        >
-          Pause
-        </button>
-        <button
-          className="btn btn-danger"
-          onClick={handleReset}
-          disabled={isActive}
-        >
-          Reset
-        </button>
+    <div id="pomodoro" className="container">
+      <div className="card text-center">
+        <div className="card-header">Pomodoro Timer</div>
+        <div className="card-body">
+          <div className="timer text-center">{formatTime(time)}</div>
+          <div className="controls d-flex justify-content-center">
+            <button
+              className="btn btn-primary me-2"
+              onClick={handleStart}
+              disabled={isActive}
+            >
+              Start
+            </button>
+            <button
+              className="btn btn-secondary me-2"
+              onClick={handlePause}
+              disabled={!isActive}
+            >
+              Pause
+            </button>
+            <button
+              className="btn btn-danger"
+              onClick={handleReset}
+              disabled={isActive}
+            >
+              Reset
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
