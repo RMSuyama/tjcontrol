@@ -20,13 +20,13 @@ const Countdown = () => {
 
   return (
 
-    <div class="card text-center">
+    <div className="card text-center">
 
-    <div class="card-footer text-body-secondary">
+    <div className="card-footer text-body-secondary">
       {countdown > 0 ? (
-        <h5 class="card-title">{countdown} dias restantes até o dia 2 de julho</h5>
+        <h5 className="card-title">{countdown} dias restantes até o dia 2 de julho</h5>
       ) : (
-        <p class="card-text">O dia 2 de julho já chegou!</p>
+        <p className="card-text">O dia 2 de julho já chegou!</p>
       )}
     </div>
   </div>
