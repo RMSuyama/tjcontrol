@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Routes from "../src/components/routes/routes";
-import app from './config/firebase';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import Login from './components/pages/login';
 
 function App() {
 
