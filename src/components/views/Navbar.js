@@ -1,9 +1,28 @@
 import React from 'react';
+import firebase from '../../config/firebase';
+import 'firebase/auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Importe o arquivo CSS
+import './Navbar.css';
+
+
 
 const Navbar = () => {
+
+  function handleLogout() {
+    firebase.auth().signOut().then(() => {
+        console.log("deslogado")
+      // Logout bem-sucedido
+      // Redirecionar para a página de login ou qualquer outra página desejada
+    }).catch((error) => {
+        console.log("erro")
+      // Ocorreu um erro durante o logout
+      console.log(error);
+    });
+  }
+  
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -35,7 +54,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      <Link className="nav-link" to="/" style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
+        <Link className="nav-link" to="" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
       </div>          
     </nav>
   );
