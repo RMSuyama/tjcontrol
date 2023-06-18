@@ -7,7 +7,7 @@
     import Edital from "../pages/Edital";
     import Rotina from "../pages/Rotina";
     import Resumos from "../pages/Resumos"
-    import Login from "../pages/login";
+    import Login from "../pages/LoginTemplate";
 
 
 function ProtectedRoute({ element: Component, ...rest }) {
