@@ -54,7 +54,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link className="nav-link" to="" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
+        <Link className="nav-link" to="/" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
       </div>          
     </nav>
   );

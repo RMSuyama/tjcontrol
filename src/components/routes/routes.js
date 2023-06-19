@@ -1,14 +1,13 @@
-    import React, { useEffect, useState } from "react";
-    import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
-    import firebase from "../../config/firebase";
-    import "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
+import firebase from "../../config/firebase";
+import "firebase/auth";
 
-    import Home from "../pages/Home";
-    import Edital from "../pages/Edital";
-    import Rotina from "../pages/Rotina";
-    import Resumos from "../pages/Resumos"
-    import Login from "../pages/LoginTemplate";
-
+import Home from "../pages/Home";
+import Edital from "../pages/Edital";
+import Rotina from "../pages/Rotina";
+import Resumos from "../pages/Resumos";
+import Login from "../pages/LoginTemplate";
 
 function ProtectedRoute({ element: Component, ...rest }) {
   const [authenticated, setAuthenticated] = useState(false);
@@ -17,10 +16,8 @@ function ProtectedRoute({ element: Component, ...rest }) {
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        // O usuário está autenticado
         setAuthenticated(true);
       } else {
-        // O usuário não está autenticado
         setAuthenticated(false);
       }
       setLoading(false);
@@ -30,31 +27,40 @@ function ProtectedRoute({ element: Component, ...rest }) {
   }, []);
 
   if (loading) {
-    // Exibir um indicador de carregamento enquanto a autenticação está sendo verificada
     return <div>Loading...</div>;
   }
 
-  return (
-    <Route
-      {...rest}
-      element={authenticated ? <Component /> : <Navigate to="/" replace />}
-    />
+  return authenticated ? (
+    <Component {...rest} />
+  ) : (
+    <Navigate to="/" replace />
   );
 }
 
-    const Rotas = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route element={<Login />} path="/" exact />
-                <Route element={<Home />} path="/home" exact />
-                <Route element={<Edital />} path="/edital" />
-                <Route element={<Rotina />} path="/rotina" />
-                <Route element={<Resumos />} path="/resumos" />
+const Rotas = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} exact />
+        <Route
+          path="/home"
+          element={<ProtectedRoute element={Home} />}
+        />
+        <Route
+          path="/edital"
+          element={<ProtectedRoute element={Edital} />}
+        />
+        <Route
+          path="/rotina"
+          element={<ProtectedRoute element={Rotina} />}
+        />
+        <Route
+          path="/resumos"
+          element={<ProtectedRoute element={Resumos} />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-            </Routes>
-        </BrowserRouter>
-    );
-    }
-
-    export default Rotas;
+export default Rotas;
